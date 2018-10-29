@@ -1,0 +1,78 @@
+<style>
+    .slider-pager .slider-pager-page {
+        color: white !important;
+        opacity: 1 !important;
+    }
+    .slider-pager .slider-pager-page.active {
+        color: #33cd5f !important;
+    }
+    .slider-pager {
+        height: 4px;
+    }
+    .ion-record {
+        font-size: 8px;
+    }
+</style>
+
+<ion-header-bar align-title="center" class="bar-balanced">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div class="h1 title login-title" >出租信息</div>
+</ion-header-bar>
+<ion-view id="personal">
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <!--头部-->
+        <ion-slide-box show-pager="true" auto-play="true">
+            <ion-slide>
+                <div class="box" style="background-image: url('img/test.jpg');background-size: 100% 100%; width: 100%;height: {{bannerHeight}};"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box" style="background-image: url('img/test2.jpg');background-size: 100% 100%; width: 100%;height: {{bannerHeight}};"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <ion-item class="mine-msg-item item">
+            <span class="msg">出租标题：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.Title}}" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item">
+            <span class="msg">出租简介：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.Summary}}" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item">
+            <span class="msg">出租型号：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.Model}}" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item">
+            <span class="msg">服务地区：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.Area}}" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item" href="tel:15913159968">
+            <span class="msg">租赁价格：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.Price}}元/天" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item" href="tel:15913159968">
+            <span class="msg">开始时间：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.DateFrom}}" disabled>
+        </ion-item>
+        <ion-item class="mine-msg-item item" href="tel:15913159968">
+            <span class="msg">结束时间：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="{{item.DateTo}}" disabled>
+        </ion-item>
+<!--         <ion-item class="mine-msg-item item" href="tel:15913159968">
+            <span class="msg">联系电话：</span>
+            <input class="textfield ng-pristine ng-untouched ng-valid b-0" value="15913159968" disabled>
+            <i class="icon ion-ios-telephone item-font-20 mine-msg-right"></i>
+        </ion-item> -->
+        <div class="item item-divider">图片简介:</div>
+        <ion-item class="item">
+            <div style="padding: 10px;">
+                <div class="mine-portarit">
+                    <img ng-src="{{item.Photo}}">
+                </div>
+            </div>
+        </ion-item>
+
+    </ion-content>
+</ion-view>

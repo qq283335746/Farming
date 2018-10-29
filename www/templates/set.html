@@ -1,0 +1,35 @@
+
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">设置</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content overflow-scroll="false">
+        <!--<div class="blank-h12"></div>-->
+<!--         <ion-item href="#/content-mine/about">
+            <span class="msg">关于我们</span>
+            <i class="icon ion-chevron-right mine-msg-right"></i>
+        </ion-item>
+        <ion-item href="#/content-mine/userprotocol">
+            <span class="msg">用户协议</span>
+            <i class="icon ion-chevron-right mine-msg-right"></i>
+        </ion-item> -->
+        <ion-list>
+            <ion-item>
+                <span class="msg">检测更新</span>
+            </ion-item>
+            <ion-item href="#/tab/callback">
+                <span class="msg">意见反馈</span>
+                <i class="icon ion-chevron-right mine-msg-right"></i>
+            </ion-item>
+        </ion-list>
+        <div class="padding">
+            <button class="button button-full button-positive" ng-click="comfirm()">
+                退出当前账号
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

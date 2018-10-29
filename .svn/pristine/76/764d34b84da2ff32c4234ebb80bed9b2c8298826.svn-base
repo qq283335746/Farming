@@ -1,0 +1,13 @@
+﻿
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">农机求租</h1>
+    <div class="buttons">
+        <a class="button button-clear" href="#/rentOutPush">发布</a>
+    </div>
+</ion-header-bar>
+<ion-content id="leaseMapContainer" overflow-scroll="false">
+
+</ion-content>

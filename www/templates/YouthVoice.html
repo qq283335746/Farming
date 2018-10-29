@@ -1,0 +1,21 @@
+﻿<ion-header-bar align-title="center" class="bar-positive">
+    <h1 class="title">青年之声</h1>
+    <div class="buttons">
+        <a class="button button-clear" href="#/tab/AddYouthVoice">发表</a>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content overflow-scroll="false">
+
+        <div class="list">
+            <div ng-click="ToDetail(item)" ng-repeat="item in YouthVoiceList" class="item item-text-wrap item-thumbnail-left item-thumbnail-left-img">
+                <img src="{{item.Img ? item.Img : ModelData.ImgLeft}}" alt="" />
+                <h2>{{item.Title}}</h2>
+                <p class="fl">上传单位：{{item.Auth}}</p>
+                <p class="fr">{{item.AddDate}}</p>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

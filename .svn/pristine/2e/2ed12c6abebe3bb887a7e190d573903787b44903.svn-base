@@ -1,0 +1,19 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">意见反馈</h1>
+    <div class="buttons" ng-click="push()">
+        <a class="button button-clear" ng-click="callBack()">提交</a>
+    </div>
+</ion-header-bar>
+<ion-view>
+  <ion-content overflow-scroll="false">
+
+      <div class="item item-divider pdl8">您的问题或建议：</div>
+      <div class="padding">
+          <textarea ng-model="feedBack.Body" placeholder="请输入您的问题或建议" class="txta69" style="height:220px;background-color:#fff;"></textarea>
+      </div>
+
+  </ion-content>
+</ion-view>

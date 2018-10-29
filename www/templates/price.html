@@ -1,0 +1,52 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">价格行情</h1>
+</ion-header-bar>
+<!--<div class="bar bar-subheader">
+    <div class="button-bar bar-balanced">
+        <a class="button dm-border-right p-0 dm-border-right" ng-class="{activity_col : type == '98'}" ng-click="changeAct(0)">活畜禽</a>
+        <a class="button dm-border-right p-0 dm-border-right" ng-class="{activity_col : type == '99'}" ng-click="changeAct(1)">畜禽产品</a>
+        <a class="button dm-border-right p-0 dm-border-right" ng-class="{activity_col : type == '100'}" ng-click="changeAct(2)">饲料</a>
+        <a class="button p-0" ng-class="{activity_col : type == '101'}" ng-click="changeAct(3)">河蟹</a>
+    </div>
+</div>-->
+
+<ion-view>
+    <ion-content class="item-divider view-info">
+
+        <div class="padding button-bar button-clear-border-none">
+            <a class="button" ng-class="btnTabIndex == 0 ? 'button-positive':'button-outline button-clear'" ng-click="onTabSelected(0)">活畜禽</a>
+            <a class="button" ng-class="btnTabIndex == 1 ? 'button-positive':'button-outline button-clear'" ng-click="onTabSelected(1)">畜禽产品</a>
+            <a class="button" ng-class="btnTabIndex == 2 ? 'button-positive':'button-outline button-clear'" ng-click="onTabSelected(2)">饲料</a>
+            <a class="button" ng-class="btnTabIndex == 3 ? 'button-positive':'button-outline button-clear'" ng-click="onTabSelected(3)">河蟹</a>
+        </div>
+        <div class="row">
+            <div class="col" ng-click="onYearChanged()">
+                <div class="ddl">
+                    <span ng-model="ModelData.Year" ng-bind="ModelData.Year"></span>年
+                    <i class="icon ion-ios-arrow-down mgl20"></i>
+                    </div>
+            </div>
+            <div class="col" ng-click="onSubCategoryChanged()">
+                <div class="ddl">
+                    <span ng-model="ModelData.SubCategoryName" ng-bind="ModelData.SubCategoryName"></span>
+                    <i class="icon ion-ios-arrow-down mgl20"></i>
+                </div>
+            </div>
+        </div>
+        <div class="yAxis-title-text">元</div>
+        <highchart id="chart1" config="chartConfig"></highchart>
+
+        <!--<ion-refresher pulling-text="下拉刷新..." spinner="lines" pulling-icon="ion-arrow-down-c" on-refresh="fresh()"></ion-refresher>
+        <div class="list">
+            <div class="div-text-point-2" ng-click="getArticle(item)" ng-repeat="item in dataArr[type]">
+                <div class="div-text-point-p-2"></div>
+                <p class="div-text-point-text-2 dm-nowrap-2">{{item.Title}}</p>
+            </div>
+        </div>
+
+        <ion-infinite-scroll ng-if="hasMore" spinner="lines" immediate-check='false' distance="1%" on-infinite="fetch(false)"></ion-infinite-scroll>-->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">问题上报</h1>
+    <div class="buttons" ng-click="push()">
+        <a class="button button-clear">上报</a>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content has-bouncing="true" overflow-scroll="false">
+
+        <div class="blank-h12"></div>
+        <ion-item class="mine-msg-item item" ng-click="selectType()" style="border-top:none;">
+            <span ng-model="typeOne" ng-bind="typeOne" class="msg"></span>
+            <i class="icon ion-ios-arrow-down cross"></i>
+        </ion-item>
+        <ion-item class="mine-msg-item item" ng-click="selectCount()">
+            <span ng-model="typeTwo" ng-bind="typeTwo" class="msg"></span>
+            <i class="icon ion-ios-arrow-down cross"></i>
+        </ion-item>
+        <div class="item item-divider pdl8">请填写上报问题：</div>
+        <div class="padding">
+            <textarea ng-model="msg.title" placeholder="请输入具体问题" class="txta69"></textarea>
+        </div>
+        <div class="item item-divider pdl8">请填写问题详情描述：</div>
+        <div class="padding">
+            <textarea ng-model="msg.content" placeholder="请输入具体的问题描述信息" class="txta69"></textarea>
+        </div>
+        <div class="padding item item-divider">
+            <div class="mine-portarit" ng-repeat="item in picArr">
+                <img ng-src="{{item}}">
+                <a ng-click="cancelImg(item)">X</a>
+            </div>
+            <div class="mine-portarit">
+                <img src="img/addportrait.png" ng-click="showImgPop()">
+            </div>
+        </div>
+
+        
+        <!--<ion-item class="mine-msg-item item">
+            <span class="msg">请输入上报问题：</span>
+            <input class="textfield" placeholder="请输入问题" ng-model="msg.title">
+        </ion-item>
+        <ion-item class="mine-msg-item item" ng-click="selectType()">
+            <span class="msg">请选择主管部门：</span>
+            <input class="textfield" placeholder="请选择部门" disabled ng-model="typeOne">
+            <i class="icon ion-chevron-right cross"></i>
+        </ion-item>
+        <ion-item class="mine-msg-item item" ng-click="selectCount()">
+            <span class="msg">请选择问题分类：</span>
+            <input class="textfield" placeholder="请选择问题分类" disabled ng-model="typeTwo">
+            <i class="icon ion-chevron-right cross"></i>
+        </ion-item>
+        <div class="item item-divider" style="padding-left: 8px;">请输入问题详情描述：</div>
+        <div class="row c-9 f-24 m-0">
+            <textarea style="border: 1px solid lightgray;" cols="300" rows="8" ng-model="msg.content" placeholder="请输入具体的问题描述信息..."></textarea>
+        </div>
+        <div style="padding: 10px;">
+            <div class="mine-portarit" ng-repeat="item in picArr">
+                <img ng-src="{{item}}">
+                <a ng-click="cancelImg(item)">X</a>
+            </div>
+            <div class="mine-portarit">
+                <img src="img/addportrait.png" ng-click="showImgPop()">
+            </div>
+        </div>-->
+    </ion-content>
+</ion-view>

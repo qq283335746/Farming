@@ -1,0 +1,34 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">农机管理</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content overflow-scroll="false" class="farm-njgl bg-1">
+
+        <div class="center">
+            <div class="row">
+                <div ng-click="navigate('#/msgList/107')" class="col border-rb" ng-style="UnitHeight">
+                    <img src="img/icons/njjszd.png" /><br />
+                    <p>农机技术指导</p>
+                </div>
+                <div ng-click="navigate('#/rent/home')" class="col border-b" ng-style="UnitHeight">
+                    <img src="img/icons/njzl.png" />
+                    <p>农机租凭</p>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-click="navigate('#/LeaseMap')" class="col border-r" ng-style="UnitHeight">
+                    <img src="img/icons/njqz.png" />
+                    <p>农机求租</p>
+                </div>
+                <div ng-click="navigate('#/map')" class="col" ng-style="UnitHeight">
+                    <img src="img/icons/njfwdt.png" />
+                    <p>农机服务地图</p>
+                </div>
+            </div>
+        </div>
+        
+    </ion-content>
+</ion-view>

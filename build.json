@@ -1,0 +1,11 @@
+{
+     "android": {
+         "release": {
+             "keystore": "d:\\com-farming.keystore",
+             "storePassword": "farming123",
+             "alias": "tygasoft",
+             "password" : "farming123",
+             "keystoreType": ""
+         }
+     }
+ }

@@ -1,0 +1,32 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<style>
+  .tab-item-active {
+    color:#00A0E9 !important;
+  }
+  .activated {
+    color:#00A0E9 !important;
+  }
+</style>
+<ion-tabs class="tabs-icon-top tabs-color-active-balanced" ng-hide="$root.hideTabs">
+  <!-- Consult Tab -->
+  <ion-tab title="首页" icon-off="icon-shouye icon-tab" icon-on="icon-shouye icon-tab" href="#/tab/home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="导航" icon-off="icon-xq icon-tab" icon-on="icon-xq icon-tab" href="#/tab/navigate">
+    <ion-nav-view name="tab-navigate"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="每日签到" icon-off="icon-record icon-tab" icon-on="icon-record icon-tab" href="#/tab/DailySign">
+    <ion-nav-view name="tab-DailySign"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="青年之声" icon-off="ion-ios-mic-outline icon-tab" icon-on="ion-ios-mic-outline icon-tab" href="#/tab/YouthVoice">
+    <ion-nav-view name="tab-YouthVoice"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="个人中心" icon-off="icon-nickname icon-tab" icon-on="icon-nickname icon-tab" href="#/tab/mine">
+    <ion-nav-view name="tab-mine"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

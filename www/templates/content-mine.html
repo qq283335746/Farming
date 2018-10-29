@@ -1,0 +1,64 @@
+<ion-header-bar align-title="center" class="bar-balanced">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()">
+        </button>
+    </div>
+    <div ng-switch="type">
+        <div ng-switch-when="invite">
+            <div class="h1 title login-title" >邀请规则</div>
+        </div>
+        <div ng-switch-when="about">
+            <div class="h1 title login-title" >关于我们</div>
+        </div>
+        <div ng-switch-when="user">
+            <div class="h1 title login-title" >用户须知</div>
+        </div>
+        <div ng-switch-when="userprotocol">
+            <div class="h1 title login-title" >用户协议</div>
+        </div>
+        <div ng-switch-when="private">
+            <div class="h1 title login-title" >隐私政策</div>
+        </div>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content>
+        <p ng-switch="type">
+            <span ng-switch-when="user">
+               用户须知协议文档...
+            </span>
+            <span ng-switch-when="userprotocol">
+               邀请规则协议文档...
+            </span>
+            <span ng-switch-when="private">
+               隐私政策协议文档...
+            </span>
+        </p>
+
+        <div ng-show="type=='about'">
+            <div style="    display: table-row-group;
+    position: absolute;
+    height: 999px;
+    width: 100%;
+    text-align: center;
+    top: -10px;
+    left: 0px;
+    background-color: lightblue;">
+                <img src="img/personalbg.jpg" style="    position: absolute;
+    width: 120px;
+    border-radius: 120px;
+    top: 64px;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;">
+                <p style="    font-size: 22px;
+    font-weight: 800;
+    margin-top: 211px;">农业知识 传承科技</p>
+                <p style="margin-top: 150px;">官网：www.farm.com</p>
+                <p>公众号：农业知识交流会</p>
+                <p>@2015-2016 ALL Rights Reserved</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

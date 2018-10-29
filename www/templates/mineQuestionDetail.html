@@ -1,0 +1,77 @@
+<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">问题详情</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content overflow-scroll="false">
+        <div class="list">
+            <div class="item item-divider pdl8">标题：</div>
+            <div class="item item-text-wrap">{{title}}</div>
+            <div class="item item-divider pdl8">描述：</div>
+            <div class="item item-text-wrap">{{content}}</div>
+            <div class="item item-divider pdl8">提问时间：</div>
+            <div class="item item-text-wrap">{{time}}</div>
+            <div class="item item-divider pdl8">附加图片：</div>
+            <div class="item item-text-wrap">
+                <div ng-repeat="item in QuestionAttaches" style="float:left;width:100px;height:100px;overflow:hidden; margin-right:10px;">
+                    <img ng-src="{{item.FileName}}" ng-click="getImg(item.FileName)" width="100" height="100">
+                </div>
+                <span class="f-dark" ng-show="QuestionAttaches.length < 1">暂无数据</span>
+                <div class="clr"></div>
+            </div>
+            <div class="item item-divider pdl8 border-none">专家解答：</div>
+            <div class="item item-text-wrap">
+                {{Answer}}
+                <span class="f-dark" ng-show="IsEmpty">未解答</span>
+            </div>
+            <div class="item item-divider pdl8" ng-if="canSubmit">进行解答：</div>
+            <div class="item item-text-wrap" ng-if="canSubmit">
+                <textarea ng-model="msg.content" placeholder="请输入解答信息..." cols="200" rows="50" class="txta69"></textarea>
+            </div>
+        </div>
+
+        <div class="padding">
+            <button class="button button-full button-positive" ng-if="canSubmit" ng-click="submit()">
+                提 交
+            </button>
+        </div>
+
+        <!--<div class="list card">
+            <div class="item item-body">
+                <h2 style="margin: 0;font-weight: bold;">{{title}}</h2>
+            </div>
+            <div class="item item-body">
+                <h2 class="dm-nowrap-2" style="margin: 0px;">详细描述：</h2>
+                <p>{{content}}</p>
+            </div>
+            <div class="item item-body">
+                <p class="dm-nowrap-2" style="margin: 0;">提问时间：{{time}}</p>
+            </div>
+            <div class="item item-body">
+                <p class="dm-nowrap-2" style="margin: 0;">附加图片：</p>
+                <div style="padding: 10px;">
+                    <div class="mine-portarit" ng-repeat="item in QuestionAttaches">
+                        <img ng-src="{{item.FileName}}" ng-click="getImg(item.FileName)">
+                    </div>
+                </div>
+            </div>
+            <div class="item item-body">
+                <h2 class="dm-nowrap-2" style="margin: 0px;">专家解答：</h2>
+                <p>{{Answer}}</p>
+            </div>
+        </div>
+
+        <div class="item item-body" ng-if="canSubmit">
+            <h2 class="dm-nowrap-2" style="margin: 0px;">进行解答：</h2>
+            <textarea style="border: 1px solid lightgray;width:100%;margin-top:10px" cols="300" rows="8" ng-model="msg.content" placeholder="请输入解答信息..." class="ng-pristine ng-untouched ng-valid"></textarea>
+        </div>
+        <div class="blank-h44"></div>-->
+    </ion-content>
+</ion-view>
+
+
+<div style="background-color: black;position: fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 10;" ng-if="imgSrc" ng-click="clearImg()">
+    <img style="position: absolute;width: 100%;max-height: 100%;height: auto;margin: auto;top: 0;left: 0;bottom: 0;right: 0;" src="{{imgSrc}}" ng-if="imgSrc" ng-click="clearImg()">
+</div>

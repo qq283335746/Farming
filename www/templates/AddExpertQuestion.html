@@ -1,0 +1,43 @@
+﻿<ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+        <button class="button button-icon ion-ios-arrow-thin-left" ng-click="$ionicGoBack()"></button>
+    </div>
+    <h1 class="title">有问必答</h1>
+    <div class="buttons" ng-click="push()">
+        <a class="button button-clear">提交</a>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <ion-content has-bouncing="true" overflow-scroll="false">
+        <div class="blank-h12"></div>
+        <!--<ion-item class="mine-msg-item item">
+            <span class="msg">请填写会诊问题：</span>
+            <input class="textfield" placeholder="请输入问题" ng-model="msg.title">
+        </ion-item>-->
+        <ion-item class="mine-msg-item item" ng-click="selectType()" style="border-top:none;">
+            <span ng-model="typeOne" ng-bind="typeOne" class="msg"></span>
+            <i class="icon ion-ios-arrow-down cross"></i>
+        </ion-item>
+        <ion-item class="mine-msg-item item" ng-click="selectCount()">
+            <span ng-model="typeTwo" ng-bind="typeTwo" class="msg"></span>
+            <i class="icon ion-ios-arrow-down cross"></i>
+        </ion-item>
+        <div class="item item-divider pdl8">请填写会诊问题：</div>
+        <div class="padding">
+            <textarea ng-model="msg.title" placeholder="请输入具体问题" class="txta69"></textarea>
+        </div>
+        <div class="item item-divider pdl8">请填写问题详情描述：</div>
+        <div class="padding">
+            <textarea ng-model="msg.content" placeholder="请输入具体的问题描述信息" class="txta69"></textarea>
+        </div>
+        <div class="padding item item-divider">
+            <div class="mine-portarit" ng-repeat="item in picArr">
+                <img ng-src="{{item}}">
+                <a ng-click="cancelImg(item)">X</a>
+            </div>
+            <div class="mine-portarit">
+                <img src="img/addportrait.png" ng-click="showImgPop()">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
